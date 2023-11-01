@@ -36,6 +36,8 @@
 		75581EB62AF146F400DDD203 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75581EB52AF146F400DDD203 /* Manager.swift */; };
 		75581EB92AF147BE00DDD203 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75581EB82AF147BE00DDD203 /* TeamsViewModel.swift */; };
 		75581EBC2AF14A8000DDD203 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75581EBB2AF14A8000DDD203 /* TeamTableViewCell.swift */; };
+		75C51C2B2AF2F97F0044E0FD /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C51C2A2AF2F97F0044E0FD /* Assets.swift */; };
+		75C51C2F2AF313D50044E0FD /* AudioManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C51C2E2AF313D50044E0FD /* AudioManagerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		75581EB52AF146F400DDD203 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		75581EB82AF147BE00DDD203 /* TeamsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		75581EBB2AF14A8000DDD203 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		75C51C2A2AF2F97F0044E0FD /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		75C51C2E2AF313D50044E0FD /* AudioManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				75581E842AF1376400DDD203 /* Chants */,
 				75581E982AF1376400DDD203 /* Teams.swift */,
+				75C51C2A2AF2F97F0044E0FD /* Assets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				75581EB82AF147BE00DDD203 /* TeamsViewModel.swift */,
+				75C51C2E2AF313D50044E0FD /* AudioManagerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,9 +284,11 @@
 				75581EB62AF146F400DDD203 /* Manager.swift in Sources */,
 				75581EAC2AF1376400DDD203 /* Teams.swift in Sources */,
 				75581EBC2AF14A8000DDD203 /* TeamTableViewCell.swift in Sources */,
+				75C51C2F2AF313D50044E0FD /* AudioManagerViewModel.swift in Sources */,
 				75581E702AF135DF00DDD203 /* AppDelegate.swift in Sources */,
 				75581EB42AF146C000DDD203 /* Team.swift in Sources */,
 				75581E722AF135DF00DDD203 /* SceneDelegate.swift in Sources */,
+				75C51C2B2AF2F97F0044E0FD /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

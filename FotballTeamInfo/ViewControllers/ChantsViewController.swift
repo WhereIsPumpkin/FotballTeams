@@ -24,6 +24,8 @@ class ChantsViewController: UIViewController {
         return tv
     }()
     
+    private lazy var teamsViewModel = TeamsViewModel()
+    private lazy var audioManagerViewModel = AudioManagerViewModel()
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -34,13 +36,16 @@ class ChantsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
     }
 }
 
 private extension ChantsViewController {
     
     func setup() {
+        
+        self.navigationController?.navigationBar.topItem?.title = "Fotball Chants"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         tableVW.dataSource = self
         
@@ -58,12 +63,23 @@ private extension ChantsViewController {
 // MARK: UITableViewDataSource
 extension ChantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return teamsViewModel.teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let team = teamsViewModel.teams[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
-        cell.configure()
+        cell.configure(with: team, delegate: self)
         return cell
     }
+}
+ 
+extension ChantsViewController: TeamTableViewCellDelegate {
+    func didTapPlayback(for team: Team) {
+        audioManagerViewModel.playback(team)
+        teamsViewModel.togglePlayback(for: team)
+        tableVW.reloadData()
+        
+    }
+
 }
